@@ -30,26 +30,26 @@ public class Principal {
                 System.out.println("Que desea calcular:");
                 System.out.println("1.Area");
                 System.out.println("2.perimetro");
-                Scanner myScann2=new Scanner(System.in);
-                        switch(myScann2.nextInt()){
+               
+                        switch(myScann.nextInt()){
                             case 1:
                                     System.out.println("Digite base");
-                                    miTriangulo.setBase(myScann2.nextDouble());
+                                    miTriangulo.setBase(myScann.nextDouble());
                                     System.out.println("Digite Altura");
-                                    miTriangulo.setH(myScann2.nextDouble());
+                                    miTriangulo.setH(myScann.nextDouble());
                                     System.out.println("El area del triangulo es: ");
                                     System.out.println(miTriangulo.calcularArea());
                             case 2: 
                                 System.out.println("Digite lado A");
-                                    miTriangulo.setLadoA(myScann2.nextDouble());
+                                    miTriangulo.setLadoA(myScann.nextDouble());
                                     System.out.println("Lado B");
-                                    miTriangulo.setLadoB(myScann2.nextDouble());
+                                    miTriangulo.setLadoB(myScann.nextDouble());
                                     System.out.println("Digite base");
-                                    miTriangulo.setBase(myScann2.nextDouble());
+                                    miTriangulo.setBase(myScann.nextDouble());
                                     
                                     System.out.println("El perimetro del triangulo es: ");
                                     System.out.println(miTriangulo.CalcularPerimetro());
-                        }        
+                        }                
 
                
         
