@@ -24,6 +24,7 @@ public class Principal {
         System.out.println("2.Rectangulo");
         System.out.println("3.Cuadrado");
         
+        try{
         Scanner myScann=new Scanner(System.in);
         switch(myScann.nextInt()){
             case 1: 
@@ -40,7 +41,7 @@ public class Principal {
                                     System.out.println("El area del triangulo es: ");
                                     System.out.println(miTriangulo.calcularArea());
                             case 2: 
-                                System.out.println("Digite lado A");
+                                    System.out.println("Digite lado A");
                                     miTriangulo.setLadoA(myScann.nextDouble());
                                     System.out.println("Lado B");
                                     miTriangulo.setLadoB(myScann.nextDouble());
@@ -49,32 +50,63 @@ public class Principal {
                                     
                                     System.out.println("El perimetro del triangulo es: ");
                                     System.out.println(miTriangulo.CalcularPerimetro());
-                        }                
-
-               
-        
+                        }               
             case 2:
-                System.out.println("Digite base");
-                miRectangulo.setBase(myScann.nextDouble());
-                System.out.println("Digite Altura");
-                System.out.println("El area del rectangulo es: ");
-                miRectangulo.setAltura(myScann.nextDouble());
-                
-               
-                System.out.println(miRectangulo.calcularArea());
+                System.out.println("Que desea calcular:");
+                System.out.println("1.Area");
+                System.out.println("2.perimetro");
+                switch(myScann.nextInt()){
+                            case 1:
+                                    System.out.println("Digite base");
+                                    miRectangulo.setBase(myScann.nextDouble());
+                                    System.out.println("Digite Altura");
+                                    miRectangulo.setAltura(myScann.nextDouble());
+                                    System.out.println("El area del rectangulo es: ");
+                                    System.out.println(miRectangulo.calcularArea());
+                            case 2:
+                                    System.out.println("Digite base");
+                                    miRectangulo.setBase(myScann.nextDouble());
+                                    System.out.println("Digite Altura");
+                                    miRectangulo.setAltura(myScann.nextDouble());
+                                    System.out.println("El perimetro del rectangulo es: ");
+                                    System.out.println(miRectangulo.CalcularPerimetro());
+                }
             case 3:
-                System.out.println("Digite el lado del cuadrado");
-                miCuadro.setL(myScann.nextDouble());
-                System.out.println("El area del cuadrado es: ");
-                System.out.println(miCuadro.calcularArea());
                 
+                System.out.println("Que desea calcular:");
+                System.out.println("1.Area");
+                System.out.println("2.perimetro");
+                switch(myScann.nextInt()){
+                    
+                    case 1:
+                        
+                            System.out.println("Digite el lado del cuadrado");
+                            miCuadro.setL(myScann.nextDouble());
+                            System.out.println("El area del cuadrado es: ");
+                            System.out.println(miCuadro.calcularArea());
+                    case 2:
+                        System.out.println("Digite el lado del cuadrado");
+                            miCuadro.setL(myScann.nextDouble());
+                            System.out.println("El perimetro del cuadrado es: ");
+                            System.out.println(miCuadro.CalcularPerimetro());
+                }
+                            
                 
                 
         }
         
         
+        }
+        catch(Exception exception){ 
         
+            
+            System.out.println("oh no ha digitado el codigo del arma nuclear");
+            
+            
+        }
+        
+        }
          }
 
 }
-}
+
