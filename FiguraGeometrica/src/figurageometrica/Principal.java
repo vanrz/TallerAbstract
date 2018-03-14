@@ -14,18 +14,22 @@ import java.util.Scanner;
 public class Principal {
    
     public static void main(String[] args) {
+        int continuar=0;
+        
         
         Triangulo miTriangulo=new Triangulo();
         Rectangulo miRectangulo=new Rectangulo();
         Cuadrado miCuadro=new Cuadrado();
-
+        do {
         System.out.println("Seleccione el tipo de figura");
         System.out.println("1.Triangulo");
         System.out.println("2.Rectangulo");
         System.out.println("3.Cuadrado");
         
-        try{
+       
         Scanner myScann=new Scanner(System.in);
+         try{
+            continuar = myScann.nextInt();
         switch(myScann.nextInt()){
             case 1: 
                 System.out.println("Que desea calcular:");
@@ -50,6 +54,9 @@ public class Principal {
                                     
                                     System.out.println("El perimetro del triangulo es: ");
                                     System.out.println(miTriangulo.CalcularPerimetro());
+                            default:
+                                System.out.println("Opcion no valida.");
+                                 break;
                         }               
             case 2:
                 System.out.println("Que desea calcular:");
@@ -70,6 +77,9 @@ public class Principal {
                                     miRectangulo.setAltura(myScann.nextDouble());
                                     System.out.println("El perimetro del rectangulo es: ");
                                     System.out.println(miRectangulo.CalcularPerimetro());
+                            default:
+                                System.out.println("Opcion no valida.");
+                             break;
                 }
             case 3:
                 
@@ -89,24 +99,40 @@ public class Principal {
                             miCuadro.setL(myScann.nextDouble());
                             System.out.println("El perimetro del cuadrado es: ");
                             System.out.println(miCuadro.CalcularPerimetro());
-                }
+                    default:
+                        System.out.println("Opcion no valida.");
+                    break;
                             
+                }
+            default:
+                System.out.println("Opcion no valida.");
+                    break;
+                
                 
                 
         }
         
         
         }
-        catch(Exception exception){ 
+        catch(Exception ex){ 
         
             
             System.out.println("oh no ha digitado el codigo del arma nuclear");
+            continuar = 0;
             
-            
+                    
         }
+        }while(continuar == 1);
+        
+        
         
         }
-         }
+} 
+        
+        
+    
+        
+        
+       
 
-}
 
